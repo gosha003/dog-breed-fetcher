@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CachingBreedFetcherTest {
 
     @Test
-    void testCachingAvoidsRedundantCalls() {
+    void testCachingAvoidsRedundantCalls() throws BreedFetcher.BreedNotFoundException {
         BreedFetcherForLocalTesting mock = new BreedFetcherForLocalTesting();
         CachingBreedFetcher cachingFetcher = new CachingBreedFetcher(mock);
 
