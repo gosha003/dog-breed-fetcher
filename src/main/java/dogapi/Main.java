@@ -31,7 +31,7 @@ public class Main {
             subBreeds = breedFetcher.getSubBreeds(breed);
         }
         catch (BreedFetcher.BreedNotFoundException e) {
-            return 0;
+            return -1;
         }
 
         if (subBreeds.isEmpty()) {
