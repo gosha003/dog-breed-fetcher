@@ -31,11 +31,11 @@ public class Main {
             subBreeds = breedFetcher.getSubBreeds(breed);
         }
         catch (BreedFetcher.BreedNotFoundException e) {
-            return -1;
+            return 0;
         }
 
         if (subBreeds.isEmpty()) {
-            return 0;
+            return -1;
         }
 
         return subBreeds.size();
